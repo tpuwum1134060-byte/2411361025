@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的網頁</title>
+
+    <style>
+    /* ---------------------------------------------------- */
+    /* 步驟 3: 網頁主體樣式 (讓圖片邊緣看起來更平順) */
+    body {
+        margin: 0;
+        padding: 0;
+        /* 將背景設為與圖片邊緣的黑色背景一致 */
+        background-color: #000000; 
+    }
+    
+    /* --- 基礎設定 (確保響應式設計和定位正常運作) --- */
+    .clickable-image-wrapper {
+        position: relative;
+        /* 設定最大寬度，防止圖片在超寬螢幕上失控 */
+        max-width: 600px; 
+        /* 水平置中 */
+        margin: 0 auto;
+    }
+    .responsive-image-container {
+        margin: 0; /* 確保 figure 標籤沒有預設邊距 */
+        padding: 0;
+    }
+    .responsive-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* --- 熱點通用樣式 --- */
+    .hotspot {
+        position: absolute;
+        /* 暫時維持半透明紅色，方便您測試點擊區域 */
+        background-color:transparent; 
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    /* ... 各區域的位置和大小設定 (保持不變) ... */
+    .main-dish { top: 20%; left: 12%; width: 45%; height: 19%; }
+    .quiche-and-drink { top: 25%; left: 50%; width: 40%; height: 25%; }
+    .icecream { top: 47%; left: 9%; width: 35%; height: 20%; }
+    .cafe-photo { top: 52%; left: 44%; width: 45%; height: 30%; }
+
+    /* --- 可選：懸停效果 --- */
+    .hotspot:hover {
+        background-color:transparent; 
+    }
+        </style>
+</head>
+<body> 
+    <div class="clickable-image-wrapper">
+        <figure class="responsive-image-container">
+            <img src="未命名-3_工作區域 1.jpg" 
+                 alt="食物和甜點的拼貼照片"
+                 class="responsive-image">
+        </figure>
+        
+        <a href="aoza.html" class="hotspot main-dish" title="點擊前往早餐盤" target="_blank"></a>
+        <a href="voute.html" class="hotspot quiche-and-drink" title="點擊前往鹹派和飲料" target="_blank"></a>
+        <a href="ice.html" class="hotspot icecream" title="點擊前往冰淇淋" target="_blank"></a>
+        <a href="cafe.html" class="hotspot cafe-photo" title="點擊前往咖啡廳" target="_blank"></a>
+    </div>
+
+</body>
+</html>
